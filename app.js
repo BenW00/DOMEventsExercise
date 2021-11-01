@@ -21,3 +21,33 @@ const form = document.querySelector(`form`)
 form.addEventListener(`submit`, () => {
     alert(form.elements.quote.value)
 })
+
+// BONUS
+
+// QUestion 4A
+const darkMode = document.querySelector(`#dm`)
+
+// Question 4B
+darkMode.addEventListener(`click`, () => {
+    for (element of document.querySelectorAll(`*`)) {
+        element.classList.toggle(`dark-mode`)
+    }
+})
+
+// Question 5A
+const reality = document.querySelector(`#reality`)
+
+// Question 5B
+let btnclicks = 0
+
+reality.addEventListener(`click`, () => {
+    if (btnclicks < 2) {
+        alert("You have successfully moved to another reality");
+    }
+    else if (btnclicks == 2) {
+        alert("OH NO! You can only move to a new another reality a couple times. You are stuck in this reality!");
+    }
+    else {
+    }
+    btnclicks++;
+})
